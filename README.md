@@ -2,7 +2,7 @@
 
 This is the free version of the Celestial admin dashboard template. Celestial has a very simple layout, specially designed to be easy to use. This admin dashboard template comes with an MIT license, so feel free to use it on all your projects! The premium version contains over 300+ custom handcrafted elements and other features like dark mode, so if you like what you see here, be sure to check out the premium version [here](https://www.bootstrapdash.com/product/celestial-admin-template/)
 
-# Demo
+# Demo 
 Click below to check out the live demo.
 
 [![N|Solid](preview.jpg)](https://www.bootstrapdash.com/demo/celestial-free/template/index.html)
