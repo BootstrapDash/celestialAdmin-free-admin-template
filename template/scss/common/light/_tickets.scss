@@ -1,0 +1,45 @@
+.tickets-tab {
+  border-bottom: none;
+  .nav-item {
+    display: block;
+    width: 33.33%;
+    padding: 0 0px;
+    .nav-link {
+      border: none;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      .badge {
+        background: theme-color(info);
+        color: $white;
+      }
+      &.active {
+        background: theme-color(info);
+        color: $white;
+        .badge {
+          background: theme-color(warning);
+        }
+      }
+    }
+  }
+}
+.tickets-tab-content {
+  border: none;
+  padding: 2rem 0;
+  .tickets-card {
+    text-decoration: none;
+    color: $body-color;
+    border: 1px solid $border-color;
+    display: block;
+    padding: .875rem;
+    margin: 1rem 0;
+    .assigned-to {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+    }
+    &:hover {
+      background: lighten(theme-color(light), 5%);
+    }
+  }
+}

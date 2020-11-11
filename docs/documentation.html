@@ -1,0 +1,2114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CelestialUI Admin Dashboard</title>
+  <link rel="stylesheet" href="../template/vendors/typicons.font/font/typicons.css">
+  <link rel="stylesheet" href="../template/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="../template/vendors/pwstabs/jquery.pwstabs.min.css">
+  <link rel="stylesheet" href="../template/vendors/simplemde/simplemde.min.css">
+  <link rel="stylesheet" href="../template/vendors/codemirror/codemirror.css">
+  <link rel="stylesheet" href="../template/vendors/codemirror/ambiance.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../template/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../template/images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller"> 
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="main-panel w-100  documentation">
+        <div class="content-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 doc-header">
+                <a class="btn btn-success" href="../template/index.html"><i class="typcn typcn-home mr-2"></i>Back to home</a>
+                <h1 class="text-primary mt-4">Documentation</h1>
+              </div>
+            </div>
+            <div class="row doc-content">
+              <div class="col-12 col-md-3 grid-margin doc-table-contents">
+                <div class="card">
+                  <div class="card-body">
+                    <h3 class="mb-4">Table of contents</h3>
+                    <ul class="list-arrow">
+                      <li>
+                        <a href="#doc-intro">Introduction</a>
+                      </li>
+                      <li>
+                        <a href="#doc-started">Getting started</a>
+                      </li>
+                      <li>
+                        <a href="#doc-structure">Basic structure</a>
+                      </li>
+                      <li>
+                        <a href="#doc-components">Components</a>
+                        <ul class="list-arrow">
+                          <li>
+                            <a href="#doc-basic-ui">Basic UI Elements</a>
+                          </li>
+                          <li>
+                            <a href="#doc-tables">Tables</a>
+                          </li>
+                          <li>
+                            <a href="#doc-charts">Charts</a>
+                          </li>
+                          <li>
+                            <a href="#doc-forms">Forms</a>
+                          </li>
+                          <li>
+                            <a href="#doc-icons">Icons</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#doc-credits">Credits</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-9 offset-md-3 grid-margin">
+                <div class="col-12 grid-margin" id="doc-intro">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mb-4">Introduction</h3>
+                            <p>CelestialUI Admin is a responsive HTML template that is based on the CSS framework Bootstrap 4 and it is built with Sass. Sass compiler makes it easier to code and customize. If you are unfamiliar with Bootstrap or Sass, visit their
+                                website and read through the documentation. All of Bootstrap components have been modified to fit the style of CelestialUI Admin and provide a consistent look throughout the template.</p>
+                            <p>Before you start working with the template, we suggest you go through the pages that are bundled with the theme. Most of the template example pages contain quick tips on how to create or use a component which can
+                                be really helpful when you need to create something on the fly.</p>
+                            <p class="d-inline"><strong>Note</strong>: We are trying our best to document how to use the template. If you think that something is missing from the documentation, please do not hesitate to tell us about it. If you have any questions or issues regarding this theme, email us at <a class="d-inline text-info" href="mailto:support@bootstrapdash.com">support@bootstrapdash.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 grid-margin" id="doc-started">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mb-4">Getting started</h3>
+                            <p>You can directly use the compiled and ready-to-use the version of the template. But in case you plan to customize the template extensively the template allows you to do so.</p>
+                            <p>Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations:</p>
+                            <textarea class="shell-mode">
+CelestialUI/
+├── template/
+      ├── css/
+      ├── fonts/
+      ├── images/
+      ├── js/
+      ├── pages/
+      ├── partials/
+      ├── index.html
+      ├── scss/
+      ├── vendors/
+      ├── gulpfile.js
+      ├── index.html
+      ├── package.json                           
+├── docs/
+      ├── documentation.html
+      ├── documentation.js
+├── CHANGELOG.md</textarea>
+                            <p class="mt-1">Note: The root folder denoted further in this documentation refers to the 'template' folder inside the downloaded folder</p>
+                            <div class="alert alert-success mt-4 d-flex align-items-center" role="alert">
+                              <i class="typcn typcn-warning"></i>
+                              <p>We have bundled up the vendor files needed for demo purpose into a folder 'vendors', you may not need all those vendors in your application.  If you want to make any change in the vendor package files, you need to change the src path for related tasks in the file gulpfile.js and run the task <code>bundleVendors</code> to rebuild the vendor files.</p>
+                            </div>
+                            <hr class="mt-5">
+                            <h4 class="mt-4">Installation</h4>
+                            <p class="mb-0">
+                              You need to install package files/Dependencies for this project if you want to customize it. To do this, you must have <span class="font-weight-bold">node and npm</span> installed in your computer.
+                            </p>
+                            <p class="mb-0">Installation guide of the node can be found <a href="https://nodejs.org/en/">here</a>. As npm comes bundled with a node, a separate installation of npm is not needed.</p>
+                            <p>
+                                If you have installed them, just go to the root folder and run the following command in your command prompt or terminal (for the mac users).
+                            </p>
+                            <textarea class="shell-mode">
+npm install</textarea>
+                            <p class="mt-4">
+                              This will install the dev dependencies in the local <span class="font-weight-bold">node_modules</span> folder in your root directory.
+                            </p>
+                            <p class="mt-2">
+                              Then you will need to install <span class="font-weight-bold">Gulp</span>. We use the Gulp task manager for the development processes. Gulp will watch for changes to the SCSS files and automatically compile the files to CSS.
+                            </p>
+                            <p>Getting started with Gulp is pretty simple. The <a href="https://gulpjs.com/" target="_blank">Gulp</a> site is a great place to get information on installing Gulp if you need more information. You need to first install Gulp-cli in your machine using the below command.</p>
+                            <textarea class="shell-mode">
+npm install -g gulp-cli</textarea>
+                            <p class="mt-4">This installs Gulp-cli globally to your machine. The other thing that Gulp requires, which, is really what does all the work, is the gulpfile.js. In this file, you set up all of your tasks that you will run.</p>
+                            <p>Don't worry. We have this file already created for you!</p>
+                            <p>To run this project in development mode enter the following command below. This will start the file watch by gulp and whenever a file is modified, the SCSS files will be compiled to create the CSS file.</p>
+<textarea class="shell-mode">
+gulp serve</textarea>           
+                            <div class="alert alert-warning mt-4" role="alert">
+                              <i class="typcn typcn-warning-outline"></i>It is important to run <code>gulp serve</code> command from the directory where the gulpfile.js is located.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 grid-margin" id="doc-structure">
+                  <div class="card">
+                      <div class="card-body">
+                            <h3>Basic structure</h3>
+                            <p class="mb-5">
+                              The below snippet shows the basic HTML structure of CelestialUI Admin.
+                              Please note that all the stylesheets and script files in the below snippet should be included to render CelestialUI Admin styles.
+                            </p>
+                            <div class="demo-tabs">
+                                <div data-pws-tab="vertical light" data-pws-tab-name="Vertical light">
+                                  <p class="mb-5">This section contains code of default vertical layout. For other layouts in vertical mode like boxed, icon-menu etc., you can follow the snippet same as below, but you have to just add the appropriate optional class to the body. More details of the classes are given in <a href="#doc-options">Options</a> section</p>
+<textarea class="multiple-codes mt-5">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>CelestialUI Admin</title>
+      <!-- base:css -->
+      <link rel="stylesheet" href="vendors/typicons.font/font/typicons.css">
+      <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+      <!-- endinject --> 
+      <!-- plugin css for this page -->
+      <!-- End plugin css for this page -->
+      <!-- inject:css -->
+      <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+      <!-- endinject -->
+      <link rel="shortcut icon" href="images/favicon.png" />
+    </head>
+    <body>
+      <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+          <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo"/></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+            <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex" type="button" data-toggle="minimize">
+              <span class="typcn typcn-th-menu"></span>
+            </button>
+          </div>
+          <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+            <ul class="navbar-nav mr-lg-2">
+              <li class="nav-item  d-none d-lg-flex">
+                <a class="nav-link" href="#">
+                  Calendar
+                </a>
+              </li>
+              <li class="nav-item  d-none d-lg-flex">
+                <a class="nav-link active" href="#">
+                  Statistic
+                </a>
+              </li>
+              <li class="nav-item  d-none d-lg-flex">
+                <a class="nav-link" href="#">
+                  Employee
+                </a>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item d-none d-lg-flex  mr-2">
+                <a class="nav-link" href="#">
+                  Help
+                </a>
+              </li>
+              <li class="nav-item dropdown d-flex">
+                <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
+                  <i class="typcn typcn-message-typing"></i>
+                  <span class="count bg-success">2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                  <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                    </div>
+                    <div class="preview-item-content flex-grow">
+                      <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                      </h6>
+                      <p class="font-weight-light small-text mb-0">
+                        The meeting is cancelled
+                      </p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                    </div>
+                    <div class="preview-item-content flex-grow">
+                      <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                      </h6>
+                      <p class="font-weight-light small-text mb-0">
+                        New product launch
+                      </p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                    </div>
+                    <div class="preview-item-content flex-grow">
+                      <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                      </h6>
+                      <p class="font-weight-light small-text mb-0">
+                        Upcoming board meeting
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li class="nav-item dropdown  d-flex">
+                <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
+                  <i class="typcn typcn-bell mr-0"></i>
+                  <span class="count bg-danger">2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                  <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-success">
+                        <i class="typcn typcn-info-large mx-0"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                      <p class="font-weight-light small-text mb-0">
+                        Just now
+                      </p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-warning">
+                        <i class="typcn typcn-cog mx-0"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <h6 class="preview-subject font-weight-normal">Settings</h6>
+                      <p class="font-weight-light small-text mb-0">
+                        Private message
+                      </p>
+                    </div>
+                  </a>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-info">
+                        <i class="typcn typcn-user-outline mx-0"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                      <p class="font-weight-light small-text mb-0">
+                        2 days ago
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li class="nav-item nav-profile dropdown">
+                <a class="nav-link dropdown-toggle  pl-0 pr-0" href="#" data-toggle="dropdown" id="profileDropdown">
+                  <i class="typcn typcn-user-outline mr-0"></i>
+                  <span class="nav-profile-name">Evan Morales</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item">
+                  <i class="typcn typcn-cog text-primary"></i>
+                  Settings
+                  </a>
+                  <a class="dropdown-item">
+                  <i class="typcn typcn-power text-primary"></i>
+                  Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="typcn typcn-th-menu"></span>
+            </button>
+          </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+          <!-- partial:partials/_settings-panel.html -->
+          <div class="theme-setting-wrapper">
+            <div id="settings-trigger"><i class="typcn typcn-cog-outline"></i></div>
+            <div id="theme-settings" class="settings-panel">
+              <i class="settings-close typcn typcn-delete-outline"></i>
+              <p class="settings-heading">SIDEBAR SKINS</p>
+              <div class="sidebar-bg-options" id="sidebar-light-theme">
+                <div class="img-ss rounded-circle bg-light border mr-3"></div>
+                Light
+              </div>
+              <div class="sidebar-bg-options selected" id="sidebar-dark-theme">
+                <div class="img-ss rounded-circle bg-dark border mr-3"></div>
+                Dark
+              </div>
+              <p class="settings-heading mt-2">HEADER SKINS</p>
+              <div class="color-tiles mx-0 px-4">
+                <div class="tiles success"></div>
+                <div class="tiles warning"></div>
+                <div class="tiles danger"></div>
+                <div class="tiles primary"></div>
+                <div class="tiles info"></div>
+                <div class="tiles dark"></div>
+                <div class="tiles default border"></div>
+              </div>
+            </div>
+          </div>
+          <!-- partial -->
+          <!-- partial:partials/_sidebar.html -->
+          <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <div class="d-flex sidebar-profile">
+                <div class="sidebar-profile-image">
+                  <img src="images/faces/face29.png" alt="image">
+                  <span class="sidebar-status-indicator"></span>
+                </div>
+                <div class="sidebar-profile-name">
+                  <p class="sidebar-name">
+                    Kenneth Osborne
+                  </p>
+                  <p class="sidebar-designation">
+                    Welcome
+                  </p>
+                </div>
+              </div>
+              <div class="nav-search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Type to search..." aria-label="search" aria-describedby="search">
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="search">
+                      <i class="typcn typcn-zoom"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="sidebar-menu-title">Dash menu</p>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title">Dashboard <span class="badge badge-primary ml-3">New</span></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">UI Elements</span>
+                <i class="typcn typcn-chevron-right menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                <i class="typcn typcn-film menu-icon"></i>
+                <span class="menu-title">Form elements</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Charts</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                <i class="typcn typcn-th-small-outline menu-icon"></i>
+                <span class="menu-title">Tables</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="tables">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                <i class="typcn typcn-compass menu-icon"></i>
+                <span class="menu-title">Icons</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <i class="typcn typcn-user-add-outline menu-icon"></i>
+                <span class="menu-title">User Pages</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+                <i class="typcn typcn-globe-outline menu-icon"></i>
+                <span class="menu-title">Error pages</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="error">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/documentation/documentation.html">
+                <i class="typcn typcn-document-text menu-icon"></i>
+                <span class="menu-title">Documentation</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="sidebar-legend">
+            <li>
+              <p class="sidebar-menu-title">Category</p>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">#Sales</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">#Marketing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">#Growth</a></li>
+          </ul>
+        </nav>
+          <!-- partial -->
+          <div class="main-panel">
+            <div class="content-wrapper">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h3 class="mb-0 font-weight-bold">Kenneth Osborne</h3>
+                  <p>Your last login: 21h ago from newzealand.</p>
+                </div>
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center justify-content-md-end">
+                    <div class="mb-3 mb-xl-0 pr-1">
+                        <div class="dropdown">
+                          <button class="btn bg-white btn-sm dropdown-toggle btn-icon-text border mr-2" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="typcn typcn-calendar-outline mr-2"></i>Last 7 days
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3" data-x-placement="top-start">
+                            <h6 class="dropdown-header">Last 14 days</h6>
+                            <a class="dropdown-item" href="#">Last 21 days</a>
+                            <a class="dropdown-item" href="#">Last 28 days</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="pr-1 mb-3 mr-2 mb-xl-0">
+                      <button type="button" class="btn btn-sm bg-white btn-icon-text border"><i class="typcn typcn-arrow-forward-outline mr-2"></i>Export</button>
+                    </div>
+                    <div class="pr-1 mb-3 mb-xl-0">
+                      <button type="button" class="btn btn-sm bg-white btn-icon-text border"><i class="typcn typcn-info-large-outline mr-2"></i>info</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row  mt-3">
+                <div class="col-xl-5 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">Sessions by Channel</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <div id="circleProgress6" class="progressbar-js-circle rounded p-3"></div>
+                            </div>
+                            <div class="col-lg-6">
+                              <ul class="session-by-channel-legend">
+                                <li>
+                                  <div>Firewalls(3)</div>
+                                  <div>4(100%)</div>
+                                </li>
+                                <li>
+                                  <div>Ports(12)</div>
+                                  <div>12(100%)</div>
+                                </li>
+                                <li>
+                                  <div>Servers(233)</div>
+                                  <div>2(100%)</div>
+                                </li>
+                                <li>
+                                  <div>Firewalls(3)</div>
+                                  <div>7(100%)</div>
+                                </li>
+                                <li>
+                                  <div>Firewalls(3)</div>
+                                  <div>6(70%)</div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">Events</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="d-flex justify-content-between mb-md-5 mt-3">
+                                <div class="small">Critical</div>
+                                <div class="text-danger small">Error</div>
+                                <div  class="text-warning small">Warning</div>
+                              </div>
+                              <canvas id="eventChart"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">Device stats</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="d-flex justify-content-between mb-4">
+                                <div>Uptime</div>
+                                <div class="text-muted">195 Days, 8 hours</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div>First Seen</div>
+                                <div class="text-muted">23 Sep 2019, 2.04PM</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div>Collected time</div>
+                                <div class="text-muted">23 Sep 2019, 2.04PM</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div>Memory space</div>
+                                <div class="text-muted">168.3GB</div>
+                              </div>
+                              <div class="progress progress-md mt-4">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-3 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">Sessions by Channel</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="d-flex justify-content-between mb-4">
+                                <div class="font-weight-medium">Empolyee Name</div>
+                                <div class="font-weight-medium">This Month</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div class="text-secondary font-weight-medium">Connor Chandler</div>
+                                <div class="small">$ 4909</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div class="text-secondary font-weight-medium">Russell Floyd</div>
+                                <div class="small">$857</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div class="text-secondary font-weight-medium">Douglas White</div>
+                                <div class="small">$612	</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div class="text-secondary font-weight-medium">Alta Fletcher </div>
+                                <div class="small">$233</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div class="text-secondary font-weight-medium">Marguerite Pearson</div>
+                                <div class="small">$233</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div class="text-secondary font-weight-medium">Leonard Gutierrez</div>
+                                <div class="small">$35</div>
+                              </div>
+                              <div class="d-flex justify-content-between mb-4">
+                                <div class="text-secondary font-weight-medium">Helen Benson</div>
+                                <div class="small">$43</div>
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                  <div class="text-secondary font-weight-medium">Helen Benson</div>
+                                  <div class="small">$43</div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">Sales Analytics</h4>
+                        <button type="button" class="btn btn-sm btn-light">Month</button>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="d-md-flex mb-4">
+                            <div class="mr-md-5 mb-4">
+                              <h5 class="mb-1"><i class="typcn typcn-globe-outline mr-1"></i>Online</h5>
+                              <h2 class="text-primary mb-1 font-weight-bold">23,342</h2>
+                            </div>
+                            <div class="mr-md-5 mb-4">
+                              <h5 class="mb-1"><i class="typcn typcn-archive mr-1"></i>Offline</h5>
+                              <h2 class="text-secondary mb-1 font-weight-bold">13,221</h2>
+                            </div>
+                            <div class="mr-md-5 mb-4">
+                              <h5 class="mb-1"><i class="typcn typcn-tags mr-1"></i>Marketing</h5>
+                              <h2 class="text-warning mb-1 font-weight-bold">1,542</h2>
+                            </div>
+                          </div>
+                          <canvas id="salesanalyticChart"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">Card Title</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="mb-5">
+                            <div class="mr-1">
+                              <div class="text-info mb-1">
+                                Total Earning
+                              </div>
+                              <h2 class="mb-2 mt-2 font-weight-bold">287,493$</h2>
+                              <div class="font-weight-bold">
+                                1.4%  Since Last Month
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="mr-1">
+                              <div class="text-info mb-1">
+                                Total Earning
+                              </div>
+                              <h2 class="mb-2 mt-2  font-weight-bold">87,493</h2>
+                              <div class="font-weight-bold">
+                                5.43%  Since Last Month
+                              </div>
+                            </div>
+                          </div>
+                          <canvas id="barChartStacked"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">E-Commerce Analytics</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-9">
+                          <div class="d-sm-flex justify-content-between">
+                            <div class="dropdown">
+                              <button class="btn bg-white btn-sm dropdown-toggle btn-icon-text pl-0" type="button" id="dropdownMenuSizeButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Mon,1 Oct 2019 - Tue,2 Oct 2019
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton4" data-x-placement="top-start">
+                                <h6 class="dropdown-header">Mon,17 Oct 2019 - Tue,25 Oct 2019</h6>
+                                <a class="dropdown-item" href="#">Tue,18 Oct 2019 - Wed,26 Oct 2019</a>
+                                <a class="dropdown-item" href="#">Wed,19 Oct 2019 - Thu,26 Oct 2019</a>
+                              </div>
+                            </div>
+                            <div>
+                              <button type="button" class="btn btn-sm btn-light mr-2">Day</button>
+                              <button type="button" class="btn btn-sm btn-light mr-2">Week</button>
+                              <button type="button" class="btn btn-sm btn-light">Month</button>
+                            </div>
+                          </div>
+                          <div class="chart-container mt-4">
+                            <canvas id="ecommerceAnalytic"></canvas>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div>
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="text-success font-weight-bold">Inbound</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="font-weight-medium">Current</div>
+                              <div class="text-muted">38.34M</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="font-weight-medium">Average</div>
+                              <div class="text-muted">38.34M</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="font-weight-medium">Maximum</div>
+                              <div class="text-muted">68.14M</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="font-weight-medium">60th %</div>
+                              <div class="text-muted">168.3GB</div>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="mt-4">
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="text-success font-weight-bold">Outbound</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="font-weight-medium">Current</div>
+                              <div class="text-muted">458.77M</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="font-weight-medium">Average</div>
+                              <div class="text-muted">1.45K</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                              <div class="font-weight-medium">Maximum</div>
+                              <div class="text-muted">15.50K</div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <div class="font-weight-medium">60th %</div>
+                              <div class="text-muted">45.5</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">Sale Analysis Trend</h4>
+                      </div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between">
+                          <small>Order Value</small>
+                          <small>155.5%</small>
+                        </div>
+                        <div class="progress progress-md  mt-2">
+                          <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div class="d-flex justify-content-between">
+                          <small>Total Products</small>
+                          <small>238.2%</small>
+                        </div>
+                        <div class="progress progress-md  mt-2">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="mt-4 mb-5">
+                        <div class="d-flex justify-content-between">
+                          <small>Quantity</small>
+                          <small>23.30%</small>
+                        </div>
+                        <div class="progress progress-md mt-2">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <canvas id="salesTopChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8 d-flex grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between">
+                        <h4 class="card-title mb-3">Project status</h4>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <img class="img-sm rounded-circle mb-md-0 mr-2" src="images/faces/face30.png" alt="profile image">
+                                  <div>
+                                    <div> Company</div>
+                                    <div class="font-weight-bold mt-1">volkswagen</div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                Budget
+                                <div class="font-weight-bold  mt-1">$2322 </div>
+                              </td>
+                              <td>
+                                Status
+                                <div class="font-weight-bold text-success  mt-1">88% </div>
+                              </td>
+                              <td>
+                                Deadline
+                                <div class="font-weight-bold  mt-1">07 Nov 2019</div>
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <img class="img-sm rounded-circle mb-md-0 mr-2" src="images/faces/face31.png" alt="profile image">
+                                  <div>
+                                    <div> Company</div>
+                                    <div class="font-weight-bold  mt-1">Land Rover</div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                Budget
+                                <div class="font-weight-bold  mt-1">$12022  </div>
+                              </td>
+                              <td>
+                                Status
+                                <div class="font-weight-bold text-success  mt-1">70% </div>
+                              </td>
+                              <td>
+                                Deadline
+                                <div class="font-weight-bold  mt-1">08 Nov 2019</div>
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <img class="img-sm rounded-circle mb-md-0 mr-2" src="images/faces/face32.png" alt="profile image">
+                                  <div>
+                                    <div> Company</div>
+                                    <div class="font-weight-bold  mt-1">Bentley </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                Budget
+                                <div class="font-weight-bold  mt-1">$8,725</div>
+                              </td>
+                              <td>
+                                Status
+                                <div class="font-weight-bold text-success  mt-1">87% </div>
+                              </td>
+                              <td>
+                                Deadline
+                                <div class="font-weight-bold  mt-1">11 Jun 2019</div>
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <img class="img-sm rounded-circle mb-md-0 mr-2" src="images/faces/face33.png" alt="profile image">
+                                  <div>
+                                    <div> Company</div>
+                                    <div class="font-weight-bold  mt-1">Morgan </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                Budget
+                                <div class="font-weight-bold  mt-1">$5,220 </div>
+                              </td>
+                              <td>
+                                Status
+                                <div class="font-weight-bold text-success  mt-1">65% </div>
+                              </td>
+                              <td>
+                                Deadline
+                                <div class="font-weight-bold  mt-1">26 Oct 2019</div>
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <img class="img-sm rounded-circle mb-md-0 mr-2" src="images/faces/face34.png" alt="profile image">
+                                  <div>
+                                    <div> Company</div>
+                                    <div class="font-weight-bold  mt-1">volkswagen</div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                Budget
+                                <div class="font-weight-bold  mt-1">$2322 </div>
+                              </td>
+                              <td>
+                                Status
+                                <div class="font-weight-bold text-success mt-1">88% </div>
+                              </td>
+                              <td>
+                                Deadline
+                                <div class="font-weight-bold  mt-1">07 Nov 2019</div>
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+            <footer class="footer">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com</a> 2020</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrapdash.com</a></span>
+              </div>
+            </footer>
+            <!-- partial -->
+          </div>
+          <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+      </div>
+      <!-- container-scroller -->
+      <!-- base:js -->
+      <script src="vendors/js/vendor.bundle.base.js"></script>
+      <!-- endinject -->
+      <!-- Plugin js for this page-->
+      <!-- End plugin js for this page-->
+      <!-- inject:js -->
+      <script src="js/off-canvas.js"></script>
+      <script src="js/hoverable-collapse.js"></script>
+      <script src="js/template.js"></script>
+      <script src="js/settings.js"></script>
+      <script src="js/todolist.js"></script>
+      <!-- endinject -->
+      <!-- plugin js for this page -->
+      <script src="vendors/progressbar.js/progressbar.min.js"></script>
+      <script src="vendors/chart.js/Chart.min.js"></script>
+      <!-- End plugin js for this page -->
+      <!-- Custom js for this page-->
+      <script src="js/dashboard.js"></script>
+      <!-- End custom js for this page-->
+    </body>
+  </html>
+    
+    
+
+
+</textarea>
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-12 grid-margin" id="doc-components">
+                  <div class="card">
+                            <div class="card-body">
+                              <!-- New Docs Starts Here -->
+                              <h3 class="my-4">Components</h3>
+                              <hr class="hr" id="doc-basic-ui">
+                              <h4 class="my-4">Basic UI Elements</h4>
+                              <div class="demo-tabs">
+                                <!-- Tabs Starts -->
+                                <div data-pws-tab="Button" data-pws-tab-name="Button">
+                                  <h5 class="mb-2 mt-4">Button with the single color</h5>
+                                  <div class="fluid-container py-4">
+                                    <button type="button" class="btn btn-primary">Primary</button>
+                                    <button type="button" class="btn btn-secondary">Secondary</button>
+                                    <button type="button" class="btn btn-success">Success</button>
+                                    <button type="button" class="btn btn-info">Info</button>
+                                    <button type="button" class="btn btn-warning">Warning</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<div class="row">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+</div>
+                                  </textarea>
+                                  <h5 class="mb-2 mt-4">Outlined</h5>
+                                  <div class="fluid-container py-4">
+                                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                                    <button type="button" class="btn btn-outline-success">Success</button>
+                                    <button type="button" class="btn btn-outline-info">Info</button>
+                                    <button type="button" class="btn btn-outline-warning">Warning</button>
+                                    <button type="button" class="btn btn-outline-danger">Danger</button>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<div class="row">
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+</div>
+                                  </textarea>
+                                  <h5 class="mb-2 mt-4">Sizes</h5>
+                                  <div class="fluid-container py-4">
+                                    <button type="button" class="btn btn-primary btn-lg">Large</button>
+                                    <button type="button" class="btn btn-primary">Medium</button>
+                                    <button type="button" class="btn btn-primary btn-sm">Small</button>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<div class="row">
+  <button type="button" class="btn btn-primary btn-lg">Small</button>
+  <button type="button" class="btn btn-secondary">Medium</button>
+  <button type="button" class="btn btn-success btn-sm">Large</button>
+</div>
+                                  </textarea>
+                                </div>
+                                <!-- Tabs Ends -->
+                                <!-- Tabs Starts -->
+                                <div data-pws-tab="Accordions" data-pws-tab-name="Accordions">
+                                  <h5 class="mb-2 mt-4">Bootstrap Accordion</h5>
+                                  <div class="fluid-container py-4">
+                                    <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingOne">
+                                                <h5 class="mb-0">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Collapsible Group Item #1
+                                                    </a>
+                                                </h5>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="card-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                    helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                    Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                    raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                    accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingTwo">
+                                                <h5 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Collapsible Group Item #2
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="card-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                    helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                    Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                    raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                    accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingThree">
+                                                <h5 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Collapsible Group Item #3
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="card-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                    helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                    Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                                    raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                                    accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<div id="accordion" class="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Collapsible Group Item #1
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-body">
+          ....
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Collapsible Group Item #2
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="card-body">
+          ....
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Collapsible Group Item #3
+        </a>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="card-body">
+          ....
+      </div>
+    </div>
+  </div>
+</div>
+                                </textarea>
+                                </div>
+                                <!-- Tabs Ends -->
+                                <!-- Tabs Starts -->
+                                <div data-pws-tab="Dropdown" data-pws-tab-name="Dropdown">
+                                  <h5 class="mb-2 mt-4">Bootstrap Dropdown</h5>
+                                  <div class="fluid-container py-4">
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+                                  </textarea>
+                                  <h5 class="mb-2 mt-4">Dropdown Outlined</h5>
+                                  <div class="fluid-container py-4">
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+                                </textarea>
+                                </div>
+                                <!-- Tabs Ends -->
+                                <!-- Tabs Starts -->
+                                <div data-pws-tab="Tabs" data-pws-tab-name="Tabs">
+                                  <h5 class="mb-2 mt-4">Bootstrap Tabs</h5>
+                                  <div class="fluid-container py-4">
+                                    <ul class="nav nav-tabs">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" href="#">Active</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" href="#">Link</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" href="#">Link</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link disabled" href="#">Disabled</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+                                  </textarea>
+                                </div>
+                                <!-- Tabs Ends -->
+                                <!-- Tabs Starts -->
+                                <div data-pws-tab="Modals" data-pws-tab-name="Modals">
+                                  <h5 class="mb-2 mt-4">Bootstrap Modal</h5>
+                                  <div class="fluid-container py-4">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#defaultModal">Launch demo modal</button>
+                                    <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>This is a modal with default size</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>This is a modal with default size</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                                </textarea>
+                                </div>
+                                <!-- Tabs Ends -->
+                                <!-- Tabs Starts -->
+                                <div data-pws-tab="bootstrap-Pagination" data-pws-tab-name="Pagination">
+                                  <h5 class="mb-2 mt-4">Bootstrap Pagination</h5>
+                                  <div class="fluid-container py-4">
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                      </ul>
+                                    </nav>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+                                  </textarea>
+                                </div>
+                                <!-- Tabs Ends -->
+                                <!-- Tabs Starts -->
+                                <div data-pws-tab="bootstrap-Badge" data-pws-tab-name="Badge">
+                                  <h5 class="mb-2 mt-4">Bootstrap Badges</h5>
+                                  <div class="fluid-container py-4">
+                                    <div class="badge badge-primary">Default</div>
+                                    <div class="badge badge-primary badge-pill">Pill</div>
+                                    <div class="badge badge-outline-primary badge-pill">Outlined</div>
+                                  </div>
+                                  <textarea class="multiple-codes">
+<div class="badge badge-primary">Default</div>
+<div class="badge badge-primary badge-pill">Pill</div>
+<div class="badge badge-outline-primary badge-pill">Outlined</div>
+                                  </textarea>
+                                </div>
+                                <!-- Tabs Ends -->
+                              </div>
+                              <!-- demo-tabs container ends -->
+
+                              <!-- New Docs Ends Here -->
+                              <!-- demo-tabs container ends -->
+
+                              <!-- New Docs Ends Here -->
+                              <!-- New Docs Starts Here -->
+                              <!--Tables starts-->
+                              <hr class="hr" id="doc-tables">
+                              <h4 class="my-4">Tables</h4>
+                              <div class="demo-tabs">
+                                  <!-- Basic table starts -->
+                                  <div data-pws-tab="basic-table" data-pws-tab-name="Basic table">
+                                    <p>
+                                      To create a basic Twitter Bootstrap table, add the following code.
+                                    </p>
+                                    <textarea class="multiple-codes">
+<table class="table">
+  <thead>
+  <tr class="">
+    <th>#</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Username</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td scope="row">2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td scope="row">3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</textarea>
+                                  </div>
+                                  <!-- Basic table Ends -->
+                              </div>
+                              <!--Tables ends-->
+
+                              <!-- New Docs Starts Here -->
+                              <!-- New Docs Ends Here -->
+                                <hr class="hr" id="doc-charts">
+                                <h4 class="my-4">Charts</h4>
+                                <div class="demo-tabs">
+                                  <div data-pws-tab="anynameyouwant1" data-pws-tab-name="Chart.js">
+                                    <p>
+                                      <a href="http://www.chartjs.org/">Chart.js</a> is a simple yet flexible JavaScript charting for designers & developers.
+                                    </p>
+                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                    <p>
+                                      To use Chart.js in your application, include the following files in &lt;head&gt;.
+                                    </p>
+                                    <textarea class="multiple-codes">
+<link rel="stylesheet" href="path-to/node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" /></textarea>
+                                    <p>
+                                      and the following script files in &lt;body&gt;.
+                                    </p>
+                                    <textarea class="multiple-codes">
+<script src="path-to/node_modules/chart.js/dist/Chart.min.js"></script></textarea>
+                                    <p>
+                                      To create a simple chart, add the following code:
+                                    </p>
+                                    <textarea class="multiple-codes">
+<canvas id="lineChart" height="250"></canvas>
+
+<script>
+  var data = {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+              'rgba(255,99,132,1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+      }]
+  };
+  var options = {
+      scales: {
+          yAxes: [{
+              ticks: {
+                  beginAtZero:true
+              }
+          }]
+      },
+      legend: {
+          display: false
+      },
+      elements: {
+        point: {
+            radius: 0
+        }
+      }
+
+  };
+  if($("#lineChart").length) {
+    var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
+    var lineChart = new Chart(lineChartCanvas, {
+      type: 'line',
+      data: data,
+      options: options
+    });
+  }
+</script></textarea>
+                                  </div>
+                                </div>
+                                  <!-- New Docs Ends Here -->
+                                  <!--Forms starts-->
+                                  <hr class="hr" id="doc-forms">
+                                  <h4 class="my-4">Forms</h4>
+                                  <div class="demo-tabs">
+                                      <!-- Basic elements Starts -->
+                                      <div data-pws-tab="basic-elements" data-pws-tab-name="Basic elements">
+                                        <p>
+                                          The basic form elements can be added to your application as below:
+                                        </p>
+                                        <textarea class="multiple-codes">
+<form class="forms-sample">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control p-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted text-success"><span class="fa fa-info mt-1"></span>&nbsp; We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control p-input" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="exampleTextarea">Example textarea</label>
+        <textarea class="form-control p-input" id="exampleTextarea" rows="3">&lt;/textarea&gt;
+    </div>
+    <div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    </div>
+    <fieldset class="form-group">
+        <legend class="mb-4 mt-5">Radio buttons</legend>
+        <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+              Option two can be something else and selecting it will deselect option one
+            </label>
+        </div>
+        <div class="form-check disabled">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+              Option three is disabled
+            </label>
+        </div>
+    </fieldset>
+    <div class="form-check col-12">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input">
+          Check me out
+        </label>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form></textarea>
+                                      </div>
+                                      <!-- Basic elements Ends -->
+                                  </div>
+                                  <!--Forms ends-->
+                                  <!--Icons starts-->
+                                  <hr class="hr" id="doc-icons">
+                                  <h4 class="my-4">Icons</h4>
+                                  <div class="demo-tabs">
+                                    <!-- MDI icon Starts -->
+                                    <div data-pws-tab="mdi-icon" data-pws-tab-name="Material Icons">
+                                      <p>
+                                        <a href="https://materialdesignicons.com/">Material Design Icons</a> growing icon collection allows designers and developers targeting various platforms to download icons in the format, color and size they need for any project.
+                                      </p>
+                                      <h4 class="mt-5 mb-4">Usage</h4>
+                                      <p>
+                                        To use Material Design Icons in your application, include the following files in &lt;head&gt;.
+                                      </p>
+                                      <textarea class="multiple-codes">
+<link rel="stylesheet" href="path-to/node_modules/mdi/css/materialdesignicons.min.css"/></textarea>
+                                      <p>
+                                        To generate an icon, add the following code:
+                                      </p>
+                                      <textarea class="multiple-codes">
+<i class="mdi mdi-bell"></i>
+                                      </textarea>
+                                    </div>
+                                    <!-- MDI icon Ends -->
+                                  </div>
+                                  <!--icons ends-->
+
+                                  <!-- demo-tabs container ends -->
+
+                                  <!-- New Docs Ends Here -->
+                                  </div> <!-- Card Block Ends Here -->
+                                </div>
+                </div>
+                <div class="col-12 grid-margin doc-credits" id="doc-credits">
+                  <div class="card">
+                    <div class="card-body">
+                      <h3 class="my-4">Credits</h3>
+                      <p>We have used the following plugins in CelestialUI Admin</p>
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <ul class="list-ticked">
+                            <li>
+                              Ace editor <a href="https://ace.c9.io/" target="_blank">https://ace.c9.io/</a>
+                            </li>
+                            <li>
+                              Bootstrap <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a>
+                            </li>
+                            <li>
+                              Bootstrap Datepicker <a href="https://gitter.im/uxsolutions/bootstrap-datepicker" target="_blank">https://gitter.im/uxsolutions/bootstrap-datepicker</a>
+                            </li>
+                            <li>
+                              Bootstrap Maxlength <a href="http://mimo84.github.com/bootstrap-maxlength" target="_blank">http://mimo84.github.com/bootstrap-maxlength</a>
+                            </li>
+                            <li>
+                              C3 <a href="https://travis-ci.org/c3js/c3" target="_blank">https://travis-ci.org/c3js/c3</a>
+                            </li>
+                            <li>
+                              Chart.js <a href="https://www.chartjs.org/" target="_blank">https://www.chartjs.org/</a>
+                            </li>
+                            <li>
+                              Chartist <a href="https://gionkunz.github.io/chartist-js/" target="_blank">https://gionkunz.github.io/chartist-js/</a>
+                            </li>
+                            <li>
+                              Clipboard <a href="https://clipboardjs.com" target="_blank">https://clipboardjs.com</a>
+                            </li>
+                            <li>
+                              Codemirror <a href="https://codemirror.net/" target="_blank">https://codemirror.net/</a>
+                            </li>
+                            <li>
+                              Colcade <a href="https://github.com/desandro/colcade" target="_blank">https://github.com/desandro/colcade/</a>
+                            </li>
+                            <li>
+                              D3 <a href="https://d3js.org" target="_blank">https://d3js.org</a>
+                            </li>
+                            <li>
+                              Datatables.net <a href="https://datatables.net/" target="_blank">https://datatables.net/</a>
+                            </li>
+                            <li>
+                              Dragula <a href="https://bevacqua.github.io/dragula/" target="_blank">https://bevacqua.github.io/dragula/</a>
+                            </li>
+                            <li>
+                              Dropify <a href="http://jeremyfagis.github.io/dropify/" target="_blank">http://jeremyfagis.github.io/dropify/</a>
+                            </li>
+                            <li>
+                              Dropzone <a href="http://www.dropzonejs.com/" target="_blank">http://www.dropzonejs.com/</a>
+                            </li>
+                            <li>
+                              Flag icons <a href="http://lipis.github.io/flag-icon-css/" target="_blank">http://lipis.github.io/flag-icon-css/</a>
+                            </li>
+                            <li>
+                              Flot <a href="https://www.flotcharts.org/" target="_blank">https://www.flotcharts.org/</a>
+                            </li>
+                            <li>
+                              Font awesome <a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a>
+                            </li>
+                            <li>
+                              Full calendar <a href="https://fullcalendar.io/" target="_blank">https://fullcalendar.io/</a>
+                            </li>
+                            <li>
+                              Gulp <a href="https://gulpjs.com/" target="_blank">https://gulpjs.com/</a>
+                            </li>
+                            <li>
+                              Icheck <a href="http://icheck.fronteed.com/" target="_blank">http://icheck.fronteed.com/</a>
+                            </li>
+                            <li>
+                              Inputmask <a href="http://robinherbots.github.io/Inputmask/" target="_blank">http://robinherbots.github.io/Inputmask/</a>
+                            </li>
+                            <li>
+                              Ion range slider <a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html" target="_blank">http://ionden.com/a/plugins/ion.rangeSlider/en.html</a>
+                            </li>
+                            <li>
+                              JQuery <a href="https://jquery.com/" target="_blank">https://jquery.com/</a>
+                            </li>
+                            <li>
+                              JQuery asColorPicker <a href="https://github.com/thecreation/jquery-asColorPicker" target="_blank">https://github.com/thecreation/jquery-asColorPicker</a>
+                            </li>
+                            <li>
+                              JQuery bar rating <a href="http://antenna.io/demo/jquery-bar-rating/examples/" target="_blank">http://antenna.io/demo/jquery-bar-rating/examples/</a>
+                            </li>
+                            <li>
+                              JQuery context menu <a href="http://swisnl.github.io/jQuery-contextMenu/" target="_blank">http://swisnl.github.io/jQuery-contextMenu/</a>
+                            </li>
+                            <li>
+                              JQuery file upload <a href="http://hayageek.com/docs/jquery-upload-file.php" target="_blank">http://hayageek.com/docs/jquery-upload-file.php</a>
+                            </li>
+                            <li>
+                              JQuery Mapael <a href="https://github.com/neveldo/mapael-maps" target="_blank">https://github.com/neveldo/mapael-maps</a>
+                            </li>
+                            <li>
+                              JQuery sparklin <a href="http://omnipotent.net/jquery.sparkline/" target="_blank">http://omnipotent.net/jquery.sparkline/</a>
+                            </li>
+                            <li>
+                              JQuery-steps <a href="http://www.jquery-steps.com/" target="_blank">http://www.jquery-steps.com/</a>
+                            </li>
+                            <li>
+                              JQuery Tags Input <a href="http://xoxco.com/projects/code/tagsinput/" target="_blank">http://xoxco.com/projects/code/tagsinput/</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <ul class="list-ticked">
+                            <li>
+                              JQuery Toast <a href="https://kamranahmed.info/toast" target="_blank">https://kamranahmed.info/toast</a>
+                            </li>
+                            <li>
+                              JQuery Validation <a href="https://jqueryvalidation.org/" target="_blank">https://jqueryvalidation.org/</a>
+                            </li>
+                            <li>
+                              JQuery Avgrund <a href="https://github.com/voronianski/jquery.avgrund.js" target="_blank">https://github.com/voronianski/jquery.avgrund.js</a>
+                            </li>
+                            <li>
+                              JQuery Repeater <a href="http://briandetering.net/repeater" target="_blank">http://briandetering.net/repeater</a>
+                            </li>
+                            <li>
+                              JSgrid <a href="http://js-grid.com/" target="_blank">http://js-grid.com/</a>
+                            </li>
+                            <li>
+                              JSgrid <a href="http://js-grid.com/" target="_blank">http://js-grid.com/</a>
+                            </li>
+                            <li>
+                              Justgage <a href="http://justgage.com/" target="_blank">http://justgage.com/</a>
+                            </li>
+                            <li>
+                              JVector Map <a href="http://jvectormap.com/" target="_blank">http://jvectormap.com/</a>
+                            </li>
+                            <li>
+                              Light gallery <a href="http://sachinchoolur.github.io/lightGallery/" target="_blank">http://sachinchoolur.github.io/lightGallery/</a>
+                            </li>
+                            <li>
+                              Material Design Icons <a href="https://materialdesignicons.com/" target="_blank">https://materialdesignicons.com/</a>
+                            </li>
+                            <li>
+                              Moment.js <a href="https://momentjs.com/" target="_blank">https://momentjs.com/</a>
+                            </li>
+                            <li>
+                              Morris.js <a href="https://momentjs.com/" target="_blank">https://momentjs.com/</a>
+                            </li>
+                            <li>
+                              NoUISlider <a href="https://refreshless.com/nouislider/" target="_blank">https://refreshless.com/nouislider/</a>
+                            </li>
+                            <li>
+                              Owl carousel <a href="https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html" target="_blank">https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html</a>
+                            </li>
+                            <li>
+                              Perfect scrollbar <a href="http://utatti.github.io/perfect-scrollbar/" target="_blank">http://utatti.github.io/perfect-scrollbar/</a>
+                            </li>
+                            <li>
+                              Popper.js <a href="https://popper.js.org/" target="_blank">https://popper.js.org/</a>
+                            </li>
+                            <li>
+                              Progressbar.js <a href="https://progressbarjs.readthedocs.io/en/latest/" target="_blank">https://progressbarjs.readthedocs.io</a>
+                            </li>
+                            <li>
+                              PWS Tabs <a href="https://alexchizhov.com/pwstabs/" target="_blank">https://alexchizhov.com/pwstabs/</a>
+                            </li>
+                            <li>
+                              Quill Editor <a href="https://quilljs.com/" target="_blank">https://quilljs.com/</a>
+                            </li>
+                            <li>
+                              Rapheal <a href="http://dmitrybaranovskiy.github.io/raphael/" target="_blank">http://dmitrybaranovskiy.github.io/raphael/</a>
+                            </li>
+                            <li>
+                              Select 2 <a href="https://select2.org/" target="_blank">https://select2.org/</a>
+                            </li>
+                            <li>
+                              Simple line icons <a href="http://simplelineicons.com/" target="_blank">http://simplelineicons.com/</a>
+                            </li>
+                            <li>
+                              SimpleMDE <a href="https://simplemde.com/" target="_blank">https://simplemde.com/</a>
+                            </li>
+                            <li>
+                              Summernote <a href="https://summernote.org/" target="_blank">https://summernote.org/</a>
+                            </li>
+                            <li>
+                              Sweetalert <a href="http://sweetalert.js.org" target="_blank">http://sweetalert.js.org</a>
+                            </li>
+                            <li>
+                              Tempusdominus-bootstrap-4 <a href="https://tempusdominus.github.io/bootstrap-4/" target="_blank">https://tempusdominus.github.io/bootstrap-4/</a>
+                            </li>
+                            <li>
+                              Themify icons <a href="https://themify.me/themify-icons" target="_blank">https://themify.me/themify-icons</a>
+                            </li>
+                            <li>
+                              TinyMCE <a href="https://www.tiny.cloud/" target="_blank">https://www.tiny.cloud/</a>
+                            </li>
+                            <li>
+                              TWBS pagination <a href="https://esimakin.github.io/twbs-pagination/" target="_blank">https://esimakin.github.io/twbs-pagination/</a>
+                            </li>
+                            <li>
+                              Typeahead <a href="https://twitter.github.io/typeahead.js/" target="_blank">https://twitter.github.io/typeahead.js/</a>
+                            </li>
+                            <li>
+                              Xeditable <a href="https://vitalets.github.io/x-editable/" target="_blank">https://vitalets.github.io/x-editable/</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="w-100 clearfix">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="typcn typcn-archive text-danger"></i></span>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+<!-- base:js -->
+<script src="../template/vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../template/js/template.js"></script>
+<!-- endinject -->
+<!-- plugin js for this page -->
+<script src="../template/vendors/pwstabs/jquery.pwstabs.min.js"></script>
+<script src="../template/vendors/simplemde/simplemde.min.js"></script>
+<script src="../template/vendors/codemirror/codemirror.js"></script>
+<script src="../template/vendors/codemirror/javascript.js"></script>
+<script src="../template/vendors/codemirror/shell.js"></script>
+<!-- End plugin js for this page -->
+<!-- Custom js for this page-->
+<script src="../template/js/codeEditor.js"></script>
+<script src="../template/js/tabs.js"></script>
+<script src="../template/js/tooltips.js"></script>
+<script src="documentation.js"></script>
+<!-- End custom js for this page-->
+</body>
+
+</html>

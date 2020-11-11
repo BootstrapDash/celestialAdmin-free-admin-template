@@ -1,0 +1,89 @@
+////////// SIDEBAR ////////
+$sidebar-width-lg: 255px;
+$sidebar-width-mini: 220px;
+$sidebar-width-icon: 70px;
+
+$sidebar-dark-bg: #1b1b29;
+$sidebar-dark-menu-color: #939393;
+$sidebar-dark-submenu-color: #939393;
+$sidebar-dark-menu-active-bg: #414147;
+$sidebar-dark-menu-active-color: #fff;
+$sidebar-dark-menu-hover-bg: #414147;
+$sidebar-dark-menu-hover-color: #fff;
+$sidebar-dark-submenu-hover-color: #fff;
+$sidebar-dark-submenu-active-color: #fff;
+$sidebar-dark-menu-icon-color: #bfccda;
+$sidebar-dark-menu-icon-active-color: #2b80ff;
+$sidebar-dark-menu-arrow-color: #939393;
+$sidebar-dark-profile-name-color: #fff;
+$sidebar-dark-profile-title-color: #7e7e7e;
+$sidebar-dark-search-color: #7e7e7e;
+$sidebar-dark-search-border: #7e7e7e;
+$sidebar-dark-title-color: #7e7e7e;
+
+$sidebar-light-bg: #fff;
+$sidebar-light-menu-color: #001737;
+$sidebar-light-menu-active-bg: initial;
+$sidebar-light-menu-active-color: theme-color(primary);
+$sidebar-light-menu-hover-bg: #333;
+$sidebar-light-menu-hover-color: #d0cfcf;
+$sidebar-light-submenu-color: $sidebar-dark-menu-color;
+$sidebar-light-submenu-hover-bg: initial;
+$sidebar-light-submenu-hover-color: #9a94a7;
+$sidebar-light-menu-icon-color: $sidebar-dark-menu-color;
+$sidebar-light-menu-icon-active-color: #2b80ff;
+$sidebar-light-profile-name-color: #001737;
+$sidebar-light-profile-title-color: #001737;
+$sidebar-light-search-color: #7e7e7e;
+$sidebar-light-search-border: #7e7e7e;
+$sidebar-light-title-color: #7e7e7e;
+
+$sidebar-menu-font-size: .875rem;
+$sidebar-menu-padding-left: 1.75rem;
+$sidebar-menu-padding-right: 1.75rem;
+$sidebar-menu-padding-top: .75rem;
+$sidebar-menu-padding-bottom: .75rem;
+
+$sidebar-submenu-padding: .25rem 0 0 3.5rem;
+$sidebar-submenu-font-size: 0.75rem;
+$sidebar-submenu-item-padding: .5rem 1rem;
+
+$sidebar-icon-font-size:  1.125rem;
+$sidebar-arrow-font-size: .625rem;
+
+$sidebar-profile-bg: transparent;
+$sidebar-profile-padding: 0 1.625rem 2.25rem 1.188rem;
+
+$sidebar-mini-menu-padding: .8125rem 1rem .8125rem 1rem;
+
+$sidebar-icon-only-menu-padding: .5rem 1.625rem .5rem 1.188rem;
+$sidebar-icon-only-submenu-padding: 0 0 0 1.5rem;
+
+$sidebar-box-shadow: 6px 16px 31px -18px #b7bcd1;
+
+$rtl-sidebar-submenu-padding: 0 4.5rem 0 0;
+
+$icon-only-collapse-width: 190px;
+$icon-only-menu-bg-light: $sidebar-light-bg;
+$icon-only-menu-bg-dark: $sidebar-dark-bg;
+
+///////// SIDEBAR ////////
+
+///////// BOXED LAYOUT ///////
+$boxed-container-width: 1200px;
+$boxed-layout-bg: #c6c8ca;
+///////// BOXED LAYOUT ///////
+
+///////// SETTINGS PANEL ////////
+
+$settings-panel-width: 300px;
+
+///////// NAVBAR ////////
+
+$navbar-default-bg: $white;
+$navbar-height: 64px;
+$navbar-menu-color: #000000;;
+$navbar-font-size: 0.875rem;
+$navbar-icon-font-size: .9375rem;
+
+///////// NAVBAR ////////

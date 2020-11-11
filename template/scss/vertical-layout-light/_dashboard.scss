@@ -1,0 +1,23 @@
+.session-by-channel-legend {
+    padding-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    li {
+        display: flex;justify-content: space-between;
+        color: theme-color(dark);
+        font-size: 0.875rem;
+        padding: .25rem;
+        position: relative;
+        padding-left: 1rem;
+        &:before {
+            content: '';
+            width: 7px;
+            height: 7px;;
+            border-radius: 100%;
+            border: 2px solid theme-color(info);
+            position: absolute;
+            left: 0;
+            top: 12px;
+        }
+    }
+}

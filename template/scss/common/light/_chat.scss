@@ -1,0 +1,97 @@
+.chat-card {
+  .chat-list-spacing {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .chat-list-wrapper {
+    padding: 2rem 0;
+    .search-wrap {
+      padding-bottom: 10px;
+      .search-fieled {
+        padding: .5rem 1rem;
+        font-size: 12px;
+      }
+    }
+    
+    .chat-list-item {
+      display: flex;
+      padding: 15px 10px;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-transition-property: "background";
+      transition-property: "background";
+      .profile-image {
+        position: relative;
+        .status-indicator {
+          position: absolute;
+          top: 15px;
+          right: -5px;
+          z-index: 1;
+          height: 12px;
+          width: 12px;
+          border: 2px solid $white;
+          border-radius: 100%;
+        }
+      }
+      &:hover {
+        background: lighten(theme-color(info), 35%);
+      }
+    }
+    .seperator {
+      border-bottom: 1px solid $border-color;
+    }
+  
+  }
+  
+  .chat-container {
+    padding: 2rem 1rem;
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+      .recieved {
+        margin-bottom: 1rem;
+        .message-recieved {
+          background: lighten(theme-color(info), 38%);
+          padding: 1rem;
+          margin-left: 45px;
+        }
+        .user-details {
+          margin-top: 1rem;
+        }
+      }
+      .sent {
+        margin-bottom: 1rem;
+        margin-left: auto;
+        max-width: 70%;
+        .message-sent {
+          background: lighten(theme-color(info), 1%);
+          padding: 1rem;
+          margin-right: 45px;
+          color: $white;
+        }
+        .user-details {
+          margin-top: 1rem;
+          text-align: right;
+        }
+      }
+    }
+    .type-chat {
+      margin-top: 1.5rem;
+      form {
+        width: 100%;
+        button {
+          background: transparent;
+          border: none;
+        }
+        .form-control {
+          border: none;
+        }
+      }
+    }
+  .chat-sidebar-right {
+    padding: 2rem 0;
+    height: 100%;
+    max-height: 950px;
+    overflow-y: auto;
+  }
+  
+}
