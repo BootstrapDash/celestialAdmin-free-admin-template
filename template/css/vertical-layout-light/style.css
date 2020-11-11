@@ -18890,6 +18890,58 @@ code {
   border-radius: 4px;
 }
 
+.purchase-popup {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 3px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.purchase-popup .btn {
+  margin-right: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.purchase-popup .btn.download-button {
+  background: rgba(249, 249, 249, 0.7);
+  color: #969292;
+  border: 1px solid #d7d7d7;
+}
+
+.purchase-popup .btn.purchase-button {
+  background-color: #f2125e;
+  color: #ffffff;
+  border: none;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.purchase-popup p {
+  margin-bottom: auto;
+  margin-top: auto;
+  color: #7e7e7e;
+  font-weight: 400;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.purchase-popup i {
+  vertical-align: middle;
+  line-height: 1;
+  margin: auto 0;
+  color: #b1b1b1;
+}
+
 /* Footer */
 .footer {
   background: #e8eff9;
@@ -18916,7 +18968,7 @@ code {
 }
 
 /* Utilities */
-.grid-margin {
+.grid-margin, .purchase-popup {
   margin-bottom: 1.875rem;
 }
 
